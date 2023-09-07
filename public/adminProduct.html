@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/a028189536.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="header-color-block">
+                    <a class="navbar-brand" href="/"> <img
+                            src="https://monosushi.com.ua/wp-content/uploads/2021/06/logo.svg" alt=""
+                            class="logoImg"></a></div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-lg-0">
+                         <div id="renderMenu"></div>
+                        <li class="nav-item hover-border setting" id="showSettings" hidden>
+                            <a class="nav-link" href="adminCategory.html">
+                                <div>
+                                    <img src="https://static.thenounproject.com/png/1152455-200.png" alt=""
+                                        class="settingImg">
+                                    <span class="fw-bold">Setting</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown hover-border smalldisplay">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="deliveryAndPayment.html"
+                                        class="dropdown-item">Delivery
+                                        and
+                                        payment</a></li>
+                                <li><a class="dropdown-item" href="aboutUs.html" class="dropdown-item">About us</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-call-back me-3">
+                    <button class="btnPhone">
+                        <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/phone.svg" alt="">
+                        <span>WE WILL CALL</span>
+                    </button>
+                </div>
+                <span class="navbar-text mx-3 ">
+                    <p class="header-phone"><b>(431) 878 08 37</b></p>
+                    <div class="header-work-time">Mon – Sun: <b>11:30 A.M – 10 P.M</b></div>
+                </span>
+
+                <ul class="userBlock d-flex flex-row">
+                    <li class="list-group-item mx-3 border border-info-subtle rounded outline-info p-2"><a
+                            class="link-primary link-underline link-underline-opacity-0" id="logIn"
+                            role="button" href="login.html">Login</a></li>
+                    <li class="list-group-item border border-info-subtle rounded outline-info p-2"> <a
+                            href="registration.html" class="link-primary link-underline link-underline-opacity-0"
+                            id="register" role="button">Register</a>
+                    </li>
+                </ul>
+                <ul class="logOut visually-hidden me-2">
+                    <li class="list-group-item border border-info-subtle rounded outline-info p-2"><a role="button"
+                            class="link-primary link-underline link-underline-opacity-0 " id="logOut">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="d-flex">
+            <aside>
+                <div class="d-flex mt-5">
+                    <nav class="navbar-expand-lg">
+                        <div class="container-fluid">
+                            <ul class="nav navbar-nav flex-column me-auto mb-2 mb-lg-0 mt-0">
+                                <li class="nav-item item">
+                                    <a class="nav-link active active-link" href="adminCategory.html"
+                                        type="button">Category</a>
+
+                                </li>
+                                <li class="nav-item borderb item">
+                                    <a class="nav-link" href="#" type="button">Product</a>
+                                </li>
+                                <li class="nav-item borderb item">
+                                    <a class="nav-link" href="adminOrder.html" type="button">Order</a>
+                                </li>
+                                <li class="nav-item exit">
+                                    <a class="nav-link" href="home.html">Exit</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </aside>
+            <div class="category-block w-100 me-5">
+                <button type="button" class="addBtn my-5" onclick="AddProduct()">ADD PRODUCT</button>
+                <div id="message" hidden class="alert my-4" role="alert">
+                </div>
+                <form id="productForm" enctype="multipart/data-form" method="post">
+                    <div class="col-12 mt-5 mb-2 w-50">
+                        <select class="form-control w-100 heightsmall" id="categorySelect">
+                        </select>
+                        <input name="name" type="text" class="form-control my-2" placeholder="*Name" id="productNm">
+                        <input name="ingredients" type="text" class="form-control w-100" placeholder="*Ingredients">
+                        <div class="blockTop d-flex">
+                            <input name="weight" type="text" class="form-control my-2 me-2" placeholder="*Weight">
+                            <input name="price" type="number" id="productPrice" class="form-control my-2"
+                                placeholder="*Price">
+                        </div>
+                        <input type="file" class="form-control" name="productImg" id="productImg" required>
+                        <button type="submit" class="btnSave" id="btn">Submit
+                        </button>
+                    </div>
+                </form>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>Ingredients</td>
+                            <td>Weight</td>
+                            <td>Price</td>
+                            <td>Picture</td>
+                            <td>Actions</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id='editDiv' class='my-5 w-70 m-auto'>
+            <!-- Modal -->
+            <div class="modal modal-dialog modal-dialog-scrollable fade" id="editModal" tabindex="-1"
+                aria-labelledby="editModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title mb-3 m-auto" id="editModalLabel">Edit Product</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form id="editForm" enctype="multipart/data-form" method="post">
+                                <label for="categoryNm" class="form-label">Category</label>
+                                <select id="catEditSelect" class="form-control" name="categoryId"></select><br>
+                                <label for="editProductTxt" class="form-label">Product Name</label>
+                                <input type='text' id='editProductTxt' class='form-control' name="name" required><br>
+                                <div class="d-flex">
+                                <label for="editProductIngred" class="form-label pt-3 me-1">Ingredients</label>
+                                <input name="ingredients" id="editProductIngred" type="text" class="form-control ">
+                                <label for="editProductWeight" class="form-label pt-3 mx-1">Weight</label>
+                                <input name="weight" type="text" id="editProductWeight" class="form-control">
+                            </div>
+                                <label for="editPriceTxt" class="form-label">Price</label>
+                                ($) <input type='text' id='editPriceTxt' class='form-control' name='price' required><br>
+                                <label for="productImg" class="form-label">Product Image</label>
+                                <input type="file" class="form-control" id="editProductImg" name="productImg"
+                                    accepts='image/*' required><br>
+                            </form>
+                        </div>
+                        <div class="modal-footer d-flex">
+                            <div id="closeDiv"><button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Close</button></div>
+                            <div id="saveChangesDiv">
+                                <!-- <button type="button" id = "saveChangesBtn"  data-bs-dismiss="modal" class="btn btn-success">Save changes</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Modal -->
+        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editModalLabel">Delete Product</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <P>Are you sure to delete this Product?</P>
+                    </div>
+                    <div class="modal-footer d-flex">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" data-bs-dismiss="modal" class="btn btn-success">Yes</button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div>
+                    <img src="https://monosushi.com.ua/wp-content/uploads/2021/06/logo.svg" alt="" class="logo">
+                </div>
+                <ul class="navbar mb-lg-0">
+                    <li class="nav-item"><a href="deliveryAndPayment.html" class="nav-link">Delivery
+                            and
+                            payment</a></li>
+                    <li class="nav-item ms-5"><a class="nav-link" href="aboutUs.html">About Us</a></li>
+                </ul>
+                <div class="footer-info">
+                    <div class="delivery-address">
+                        <p><strong>Address</strong></p>
+                        <ul>
+                            <li>995 Portage Ave, Winnipeg, MB</li>
+                            <li>380 St Mary Ave, Winnipeg, MB</li>
+                        </ul>
+                    </div>
+                    <div class="order-phone">
+                        <p><strong>Make us a call</strong></p>
+                        <a><b>(431) 878 08 37</b></a>
+                    </div>
+                    <div class="work-time">
+                        <p><strong>Work schedule</strong></p>
+                        <p>Mon – Sun: <b>11:30 A.M – 10 P.M</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© 2022 Monosushi</p>
+                </div>
+                <div class="pay-cards">
+                    <div class="pay-card-item">
+                        <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/pay-card-img-1.svg" alt="">
+                    </div>
+                    <div class="pay-card-item">
+                        <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/pay-card-img-2.svg" alt="">
+                    </div>
+                    <div class="pay-card-item">
+                        <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/pay-card-img-3.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="social">
+                    <span>Follow us</span>
+                    <ul>
+                        <li>
+                            <a class="icon-btn" target="_blank">
+                                <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/facebook-icon.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-btn" target="_blank">
+                                <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/instagram-icon.svg"
+                                    alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="develope">
+                    <a target="_blank" class="footer-logo">
+                        <span>@IvannaHaiovska </span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/shared.js"></script>
+    <script src="js/product.js"></script>
+    <script src="js/renderMenu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a028189536.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="header-color-block">
+                    <a class="navbar-brand" href="/"> <img
+                            src="https://monosushi.com.ua/wp-content/uploads/2021/06/logo.svg" alt=""
+                            class="logoImg"></a></div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-lg-0">
+                          <div id="renderMenu"></div>
+                        <li class="nav-item hover-border setting" id="showSettings" hidden>
+                            <a class="nav-link" href="adminCategory.html">
+                                <div>
+                                    <img src="https://static.thenounproject.com/png/1152455-200.png" alt=""
+                                        class="settingImg">
+                                    <span class="fw-bold">Setting</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown hover-border smalldisplay">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                             <ul class="dropdown-menu">
+                                 <li><a class="dropdown-item" href="deliveryAndPayment.html"
+                                         class="dropdown-item">Delivery
+                                         and
+                                         payment</a></li>
+                                 <li><a class="dropdown-item" href="aboutUs.html" class="dropdown-item">About us</a>
+                             </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-call-back me-3">
+                    <button class="btnPhone">
+                        <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/phone.svg" alt="">
+                        <span>WE WILL CALL</span>
+                    </button>
+                </div>
+                <span class="navbar-text mx-3 ">
+                    <p class="header-phone"><b>(431) 878 08 37</b></p>
+                    <div class="header-work-time">Mon – Sun: <b>11:30 A.M – 10 P.M</b></div>
+                </span>
+
+                <ul class="userBlock d-flex flex-row">
+                    <li class="list-group-item mx-3 border border-info-subtle rounded outline-info p-2"><a
+                            class="link-primary link-underline link-underline-opacity-0" id="logIn"
+                            role="button" href="login.html">Login</a></li>
+                    <li class="list-group-item border border-info-subtle rounded outline-info p-2"> <a
+                            href="registration.html"
+                            class="link-primary link-underline link-underline-opacity-0" id="register"
+                            role="button">Register</a>
+                    </li>
+                </ul>
+                <ul class="logOut visually-hidden me-2">
+                    <li class="list-group-item border border-info-subtle rounded outline-info p-2"><a role="button"
+                            class="link-primary link-underline link-underline-opacity-0 " id="logOut">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="center-info">
+                <h2 class="title text-center line">Delivery and payment</h2>
+            </div>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col green">
+                        <div class="delivery-info-img">
+                            <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/mn-delivery-img.svg" alt="">
+                        </div>
+                        <div class="delivery-info-text text-center g">
+                            <div class="h4 title fw-bold">Green area</div>
+                            <div class="text-sm">
+                                <p>We deliver within the green zone<span><b> 1</b> hour</span></p>
+                                <p>The minimum order amount in this zone is <span><b>20</b> $</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col yellow">
+                        <div class="delivery-info-img">
+                            <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/mn-delivery-img.svg" alt="">
+                        </div>
+                        <div class="delivery-info-text text-center">
+                            <div class="h4 title fw-bold">Yellow area</div>
+                            <div class="text-sm">
+                                <p>We deliver within the yellow zone<span><b> 1.5</b> hour</span></p>
+                                <p>The minimum order amount in this zone is <span><b>35</b> $</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col red">
+                        <div class="delivery-info-img">
+                            <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/mn-delivery-img.svg" alt="">
+                        </div>
+                        <div class="delivery-info-text text-center">
+                            <div class="h4 title fw-bold">Red area</div>
+                            <div class="text-sm">
+                                <p>We deliver within the red zone<span><b> 2</b> hour</span></p>
+                                <p>The minimum order amount in this zone is <span><b>50</b> $</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="width">
+                <div class="map row m-auto my-5">
+                    <iframe
+                        src="https://www.google.com/maps/d/u/1/embed?mid=1AuTKWUajhHx5fyG8NMaPy9Qly5cLjqo&ehbc=2E312F&noprof=1"
+                        width="640" height="480"></iframe>
+                </div>
+
+                <div class="row widthRow text-center">
+                    <div class="text-md text-center1">
+                        The Monosushi team offers an extremely convenient delivery and payment system. The clarity
+                        of ours
+                        work standards
+                        ensures fast and high-quality fulfillment of orders for our guests.<br>
+                        <br>
+                        We divided Winnipeg into conventional delivery zones - green, yellow and red. For each zone we
+                        are
+                        clear
+                        we determine the time
+                        delivery
+                        <br>
+                        The green delivery zone is closer to our kitchen, so orders to this zone are delivered
+                        within 1 hour.
+                        To the yellow zone, which is much further - up to 1.5 hours. And to the red zone - 2 hours.
+                    </div>
+                </div>
+                <h2 class="title text-center w-100 mb-4">Payment</h2>
+                <div class="d-flex mb-5 row w-70">
+                    <div class="pay-info-item col ms-5">
+                        <div class="pay-info-img mt-3">
+                            <img src="https://monosushi.com.ua/wp-content/uploads/2020/11/pay-info-img-3.svg" alt="">
+                        </div>
+                        <div class="pay-info-text">
+                            <h5 class="title">Payment in cash</h5>
+                            <div class="text-sm">
+                                <p>Pay for your favorite sushi with cash on delivery.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pay-info-item col">
+                        <div class="pay-info-img mt-3">
+                            <img src="https://monosushi.com.ua/wp-content/uploads/2020/11/pay-info-img-1.svg" alt="">
+                        </div>
+                        <div class="pay-info-text">
+                            <h5 class="title">Cashless payment</h5>
+                            <div class="text-sm">
+                                <p>Pay for your favorite sushi online or by card upon delivery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="text-md text-center1">
+                        We offer you the 3 most common payment options: cash, online payment or
+                        calculation
+                        card<br>
+                        <br>
+                        Just select the most convenient payment method for you when placing an order on the website
+                        or inform
+                        about this
+                        operator on the phone.<br>
+                        <br>
+                        "Monosushi" delivery means clear standards of work, high level of service and care for
+                        each guest We
+                        daily
+                        evolve to hear only three words "Monosushi is love". </div>
+                </div>
+            </div>
+        </div>
+ </main>
+ <footer>
+     <div class="footer-inner">
+         <div class="footer-top">
+             <div>
+                 <img src="https://monosushi.com.ua/wp-content/uploads/2021/06/logo.svg" alt="" class="logo">
+             </div>
+             <ul class="navbar mb-lg-0">
+                 <li class="nav-item"><a href="deliveryAndPayment.html" class="nav-link">Delivery
+                         and
+                         payment</a></li>
+                 <li class="nav-item ms-5"><a class="nav-link" href="aboutUs.html">About Us</a></li>
+             </ul>
+             <div class="footer-info">
+                 <div class="delivery-address">
+                     <p><strong>Address</strong></p>
+                     <ul>
+                         <li>995 Portage Ave, Winnipeg, MB</li>
+                         <li>380 St Mary Ave, Winnipeg, MB</li>
+                     </ul>
+                 </div>
+                 <div class="order-phone">
+                     <p><strong>Make us a call</strong></p>
+                     <a><b>(431) 878 08 37</b></a>
+                 </div>
+                 <div class="work-time">
+                     <p><strong>Work schedule</strong></p>
+                     <p>Mon – Sun: <b>11:30 A.M – 10 P.M</b></p>
+                 </div>
+             </div>
+         </div>
+         <div class="footer-bottom">
+             <div class="copyright">
+                 <p>© 2022 Monosushi</p>
+             </div>
+             <div class="pay-cards">
+                 <div class="pay-card-item">
+                     <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/pay-card-img-1.svg" alt="">
+                 </div>
+                 <div class="pay-card-item">
+                     <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/pay-card-img-2.svg" alt="">
+                 </div>
+                 <div class="pay-card-item">
+                     <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/pay-card-img-3.svg" alt="">
+                 </div>
+             </div>
+
+             <div class="social">
+                 <span>Follow us</span>
+                 <ul>
+                     <li>
+                         <a class="icon-btn" target="_blank">
+                             <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/facebook-icon.svg" alt="">
+                         </a>
+                     </li>
+                     <li>
+                         <a class="icon-btn" target="_blank">
+                             <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/instagram-icon.svg" alt="">
+                         </a>
+                     </li>
+                 </ul>
+             </div>
+
+             <div class="develope">
+                 <a target="_blank" class="footer-logo">
+                     <span>@IvannaHaiovska </span></a>
+             </div>
+         </div>
+     </div>
+ </footer>
+
+    <script src="js/shared.js"></script>
+    <script src="js/delivery.js"></script>
+    <script src="js/renderMenu.js"></script>
+</body>
+</html>

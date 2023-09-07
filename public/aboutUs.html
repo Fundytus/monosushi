@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a028189536.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="header-color-block">
+                    <a class="navbar-brand" href="/"> <img
+                            src="https://monosushi.com.ua/wp-content/uploads/2021/06/logo.svg" alt=""
+                            class="logoImg"></a></div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-lg-0">
+                        <div id="renderMenu"></div>
+                        <li class="nav-item hover-border setting" id="showSettings" hidden>
+                            <a class="nav-link" href="adminCategory.html">
+                                <div>
+                                    <img src="https://static.thenounproject.com/png/1152455-200.png" alt=""
+                                        class="settingImg">
+                                    <span class="fw-bold">Setting</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown hover-border smalldisplay">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="deliveryAndPayment.html"
+                                        class="dropdown-item">Delivery
+                                        and
+                                        payment</a></li>
+                                <li><a class="dropdown-item" href="aboutUs.html" class="dropdown-item">About us</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-call-back me-3">
+                    <button class="btnPhone">
+                        <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/phone.svg" alt="">
+                        <span>WE WILL CALL</span>
+                    </button>
+                </div>
+                <span class="navbar-text mx-3 ">
+                    <p class="header-phone"><b>(431) 878 08 37</b></p>
+                    <div class="header-work-time">Mon – Sun: <b>11:30 A.M – 10 P.M</b></div>
+                </span>
+
+                <ul class="userBlock d-flex flex-row">
+                    <li class="list-group-item mx-3 border border-info-subtle rounded outline-info p-2"><a
+                            class="link-primary link-underline link-underline-opacity-0" id="logIn"
+                            role="button" href="login.html">Login</a></li>
+                    <li class="list-group-item border border-info-subtle rounded outline-info p-2"> <a
+                            href="registration.html"
+                            class="link-primary link-underline link-underline-opacity-0" id="register"
+                            role="button">Register</a>
+                    </li>
+                </ul>
+                <ul class="logOut visually-hidden me-2">
+                    <li class="list-group-item border border-info-subtle rounded outline-info p-2"><a role="button"
+                            class="link-primary link-underline link-underline-opacity-0 " id="logOut">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="center-info">
+                <h2 class="title text-cut-2 line">About us</h2>
+            </div>
+            <div class="row m-auto w-75">
+                <div class="simple-page">
+                    <h3 class="textStrong"><strong>Monosushi –</strong><strong> delivery of incredibly delicious sushi
+                            in
+                            Winnipeg</strong><strong>.</strong>
+                    </h3>
+                    <p>The main priority is the high quality of food and service. We are a team of professionals who
+                        work for
+                        you every day<br>
+                        Quality and Speed! - these are the two main priorities in the work of the team. First of all, of
+                        course,
+                        Quality.<br>
+                        Sushi is prepared without delay, immediately after your order. And thanks to modern technologies
+                        and<br>
+                        responsible training of employees, it is possible to deliver fresh meals in 59 minutes in 75% of
+                        orders.</p>
+                    <ul class="text-start">
+                        <li>high quality of food and service</li>
+                        <li>team of professionals</li>
+                        <li>modern cooking technologies</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex mx-5">
+                <div class="block-img smallimg">
+                    <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/about-img-1-568x568.jpg" alt=""
+                        class="imgLoaded">
+                </div>
+                <div class="block-info">
+                    <div class="simple-page">
+                        <h3>Hello! Shall we meet?</h3>
+                        <p>Monosushi is the delivery of the tastiest sushi in Lviv, which was created by a team of
+                            perfectionists. Two
+                            friends who adore roles decided to create a product that they lacked on the Lviv market.
+                            Product, in
+                            how perfect everything will be: taste, packaging, service and all this at a loyal price!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row-reverse mt-5">
+                <div class="block-img">
+                    <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/about-img-2-568x568.jpg" alt="">
+                </div>
+                <div class="block-info m-1">
+                    <div class="simple-page me-5">
+                        <h3>Our priority is your smile of pleasure</h3>
+                        <p><strong>Monosushi</strong> is the delivery of one (mono) product. Sushi has not been overseas
+                            for a
+                            long time
+                            a delicacy Rolls have long become an ordinary dish, but the process of their preparation
+                            remains the
+                            same
+                            whole
+                            art Sushi must be prepared according to a clear technology, strictly following traditions.
+                            And this
+                            is us
+                            real
+                            experts! Are you in doubt? Then order Monosushi free delivery and enjoy.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row bigrow my-5">
+                <h3 class="title text-center">Our advantages</h3>
+                <div class="swiper-entry slider-advantages products_swiper ">
+                    <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+                        <div class="swiper-wrapper d-flex justify-content-center">
+                            <div class="swiper-slide swiper-slide-active">
+                                <div class="advantages-item">
+                                    <div class="advantages-item-img">
+                                        <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/advantages-img-1.svg"
+                                            alt=""> </div>
+                                    <div class="h5 title">Fresh products</div>
+                                    <div class="text-sm text-cut-5">
+                                        <p>Our ingredients were floating in the sea yesterday, and today they are
+                                            already in
+                                            your dryers</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-next">
+                                <div class="advantages-item">
+                                    <div class="advantages-item-img">
+                                        <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/advantages-img-2.svg"
+                                            alt=""> </div>
+                                    <div class="h5 title">Incredible taste</div>
+                                    <div class="text-sm text-cut-5">
+                                        <p>We have created dryers that will make your receptors explode with pleasure
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="advantages-item">
+                                    <div class="advantages-item-img">
+                                        <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/advantages-img-3.svg"
+                                            alt=""> </div>
+                                    <div class="h5 title">Large portions</div>
+                                    <div class="text-sm text-cut-5">
+                                        <p>We have found ideal portions of rolls and always adhere to the weight
+                                            indicated on
+                                            the website
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="advantages-item">
+                                    <div class="advantages-item-img">
+                                        <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/advantages-img-4.svg"
+                                            alt=""> </div>
+                                    <div class="h5 title">Cleanliness in the kitchen</div>
+                                    <div class="text-sm text-cut-5">
+                                        <p>We understand like no other that seafood needs absolute cleanliness in the
+                                            kitchen
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-5">
+                <h3 class="title text-center">Popular questions</h3>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-title ps-5">How to order
+                            if our address is not in your area
+                            delivery?</div>
+                        <div class="accordion-inner ps-5">
+                            <div class="text article">
+                                <p>If your address is outside your delivery zone, you can:</p>
+                                <ol>
+                                    <li class="mb">Pick up the order by pickup at one of our addresses. (In this case
+                                        you
+                                        will receive
+                                        "Baked
+                                        mono maki with salmon as a gift).</li>
+                                    <li>Find out from the operator whether it is possible to make an exception for
+                                        delivery
+                                        outside the zone c
+                                        present
+                                        moment
+                                        time.</li>
+                                </ol>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="accordion-item">
+                            <div class="accordion-title ps-5">What time is it
+                                wait for the order?</div>
+                            <div class="accordion-inner">
+                                <div class="text article ps-5">
+                                    <p>Delivery time depends on the order address.<br>
+                                        Delivery to the green zone - up to 1 hour.<br>
+                                        Delivery to the yellow zone - up to 1.5 hours. <br>
+                                        Delivery to the red zone - up to 2 hours.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="accordion-item">
+                            <div class="accordion-title ps-5">Is shipping
+                                free?</div>
+                            <div class="accordion-inner">
+                                <div class="text article ps-5">
+                                    <p>Yes, delivery is free with a minimum order amount of $20 in the green delivery
+                                        zone, $35
+                                        in the yellow zone and $50 in the red zone.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="accordion-item">
+                            <div class="accordion-title ps-5">What time do you
+                                accept orders?</div>
+                            <div class="accordion-inner">
+                                <div class="text article ps-5">
+                                    <p>We accept orders every day from 11:00 a.m. to 10:30 p.m.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div>
+                    <img src="https://monosushi.com.ua/wp-content/uploads/2021/06/logo.svg" alt="" class="logo">
+                </div>
+                <ul class="navbar mb-lg-0">
+                    <li class="nav-item"><a href="deliveryAndPayment.html" class="nav-link">Delivery
+                            and
+                            payment</a></li>
+                    <li class="nav-item ms-5"><a class="nav-link" href="aboutUs.html">About Us</a></li>
+                </ul>
+                <div class="footer-info">
+                    <div class="delivery-address">
+                        <p><strong>Address</strong></p>
+                        <ul>
+                            <li>995 Portage Ave, Winnipeg, MB</li>
+                            <li>380 St Mary Ave, Winnipeg, MB</li>
+                        </ul>
+                    </div>
+                    <div class="order-phone">
+                        <p><strong>Make us a call</strong></p>
+                        <a><b>(431) 878 08 37</b></a>
+                    </div>
+                    <div class="work-time">
+                        <p><strong>Work schedule</strong></p>
+                        <p>Mon – Sun: <b>11:30 A.M – 10 P.M</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© 2022 Monosushi</p>
+                </div>
+                <div class="pay-cards">
+                    <div class="pay-card-item">
+                        <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/pay-card-img-1.svg" alt="">
+                    </div>
+                    <div class="pay-card-item">
+                        <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/pay-card-img-2.svg" alt="">
+                    </div>
+                    <div class="pay-card-item">
+                        <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/pay-card-img-3.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="social">
+                    <span>Follow us</span>
+                    <ul>
+                        <li>
+                            <a class="icon-btn" target="_blank">
+                                <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/facebook-icon.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-btn" target="_blank">
+                                <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/instagram-icon.svg"
+                                    alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="develope">
+                    <a target="_blank" class="footer-logo">
+                        <span>@IvannaHaiovska </span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/shared.js"></script>
+    <script src="js/about.js"></script>
+<script src="js/renderMenu.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a028189536.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="header-color-block">
+                    <a class="navbar-brand" href="/"> <img
+                            src="https://monosushi.com.ua/wp-content/uploads/2021/06/logo.svg" alt=""
+                            class="logoImg"></a></div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-lg-0">
+                         <div id="renderMenu"></div>
+                        <li class="nav-item hover-border" id="showSettings" hidden>
+                            <a class="nav-link active" href="adminCategory.html">
+                                <div>
+                                    <img src="https://static.thenounproject.com/png/1152455-200.png" alt=""
+                                        class="settingImg">
+                                    <span class="fw-bold">Setting</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown hover-border smalldisplay">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="deliveryAndPayment.html"
+                                        class="dropdown-item">Delivery
+                                        and
+                                        payment</a></li>
+                                <li><a class="dropdown-item" href="aboutUs.html" class="dropdown-item">About us</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-call-back me-3">
+                    <button class="btnPhone">
+                        <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/phone.svg" alt="">
+                        <span>WE WILL CALL</span>
+                    </button>
+                </div>
+                <span class="navbar-text mx-3 ">
+                    <p class="header-phone"><b>(431) 878 08 37</b></p>
+                    <div class="header-work-time">Mon – Sun: <b>11:30 A.M – 10 P.M</b></div>
+                </span>
+
+                <ul class="userBlock d-flex flex-row">
+                    <li class="list-group-item mx-3 border border-info-subtle rounded outline-info p-2"><a
+                            class="link-primary link-underline link-underline-opacity-0" id="logIn"
+                            role="button" href="login.html">Login</a></li>
+                    <li class="list-group-item border border-info-subtle rounded outline-info p-2"> <a
+                            href="registration.html"
+                            class="link-primary link-underline link-underline-opacity-0" id="register"
+                            role="button">Register</a>
+                    </li>
+                </ul>
+                <ul class="logOut visually-hidden me-2">
+                    <li class="list-group-item border border-info-subtle rounded outline-info p-2"><a role="button"
+                            class="link-primary link-underline link-underline-opacity-0 " id="logOut">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+<main>
+    <div class="mb-3 m-auto my-5 login">
+        <div class="alert alert-danger alert-dismissible fade">
+            <p id='errorMsg'></p>
+        </div>
+        <div class="col-12">
+            <label class="form-label" for="email">Email address</label>
+            <div class="input-group">
+                <div class="input-group-text"><i class="fa fa-envelope"></i></div>
+                <input type="email" class="form-control" id="email" placeholder="Email" name="email" minlength="4"
+                    maxlength="128" required>
+            </div>
+        </div>
+        <div class="col-12 my-2">
+            <label class="form-label" for="password">Password</label>
+            <div class="input-group">
+                <div class="input-group-text"><i class="fa fa-lock"></i></div>
+                <input type="password" class="form-control" id="password" placeholder="Password" name="password"
+                    minlength="4" maxlength="128" required>
+            </div>
+        </div>
+        <div class="col-12 mb-5 text-center">
+            <button type="submit" class="loginBtn" onclick="login()"> Login </button>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div>
+                <img src="https://monosushi.com.ua/wp-content/uploads/2021/06/logo.svg" alt="" class="logo">
+            </div>
+            <ul class="navbar mb-lg-0">
+                <li class="nav-item"><a href="deliveryAndPayment.html" class="nav-link">Delivery and payment</a></li>
+                <li class="nav-item ms-5"><a class="nav-link" href="aboutUs.html">About Us</a></li>
+            </ul>
+            <div class="footer-info">
+                <div class="delivery-address">
+                    <p><strong>Address</strong></p>
+                    <ul>
+                        <li>995 Portage Ave, Winnipeg, MB</li>
+                        <li>380 St Mary Ave, Winnipeg, MB</li>
+                    </ul>
+                </div>
+                <div class="order-phone">
+                    <p><strong>Make us a call</strong></p>
+                    <a><b>(431) 878 08 37</b></a>
+                </div>
+                <div class="work-time">
+                    <p><strong>Work schedule</strong></p>
+                    <p>Mon – Sun: <b>11:30 A.M – 10 P.M</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>© 2022 Monosushi</p>
+            </div>
+            <div class="pay-cards">
+                <div class="pay-card-item">
+                    <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/pay-card-img-1.svg" alt="">
+                </div>
+                <div class="pay-card-item">
+                    <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/pay-card-img-2.svg" alt="">
+                </div>
+                <div class="pay-card-item">
+                    <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/pay-card-img-3.svg" alt="">
+                </div>
+            </div>
+
+            <div class="social">
+                <span>Follow us</span>
+                <ul>
+                    <li>
+                        <a class="icon-btn" target="_blank">
+                            <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/facebook-icon.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-btn" target="_blank">
+                            <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/instagram-icon.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="develope">
+                <a target="_blank" class="footer-logo">
+                    <span>@IvannaHaiovska </span></a>
+            </div>
+        </div>
+    </div>
+    </footer>
+    <script src="js/user.js"></script>
+</body>
+</html>
